@@ -1,6 +1,10 @@
-# KeSystem
+# Ke System
 
-**TODO: Add description**
+My initial goal here is to provide an implementation of the KE System for classical propositional logic.
+
+If you want to know more about the KE System, which is a kind of tableau system created by Marco Mondadori, read [
+The Taming of the Cut. Classical Refutations with Analytic Cut](https://www.researchgate.net/profile/Marcello_DAgostino/publication/31089377_The_Taming_of_the_Cut_Classical_Refutations_with_Analytic_Cut/links/004635276879db86c1000000/The-Taming-of-the-Cut-Classical-Refutations-with-Analytic-Cut.pdf) by  MARCELLO D' AGOSTINO and MARCO MONDADORI.
+
 
 ## Installation
 
