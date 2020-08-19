@@ -10,7 +10,7 @@ defmodule KE.Core do
   end
 
   def close(%{formulas: formulas}) do
-    %__MODULE__ {
+    %__MODULE__{
       formulas: formulas,
       status: :closed
     }

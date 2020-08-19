@@ -1,2 +1,2 @@
-defmodule KeSystem do
+defmodule KESystem do
 end
