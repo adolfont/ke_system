@@ -7,6 +7,16 @@ defmodule FormulasTest do
   end
 
   test "create a new negated atomic formula" do
-    assert Formula.new(:not, :p) == {:not, :p}
+    assert Formula.new(:p, :not) == {:not, :p}
+  end
+
+  test "create a new negated composite formula" do
+    not_not_p =
+      Formula.new(:p)
+      |> Formula.new(:not)
+      |> Formula.new(:not)
+
+    IO.inspect(not_not_p)
+    assert not_not_p == {:not, {:not, :p}}
   end
 end
