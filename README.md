@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/adolfont/ke_system)
+
 # Ke System
 
 My initial goal here is to provide an implementation of the KE System for classical propositional logic.
