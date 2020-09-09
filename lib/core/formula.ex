@@ -10,4 +10,8 @@ defmodule Logic.Formula do
   def new(formula, :not) when is_tuple(formula) do
     {:not, formula}
   end
+
+  def new({left_subformula, right_subformula}, :and) do
+    {left_subformula, :and, right_subformula}
+  end
 end

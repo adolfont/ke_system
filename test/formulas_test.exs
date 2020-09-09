@@ -16,7 +16,19 @@ defmodule FormulasTest do
       |> Formula.new(:not)
       |> Formula.new(:not)
 
-    IO.inspect(not_not_p)
     assert not_not_p == {:not, {:not, :p}}
+  end
+
+  test "create a new conjunction p&q" do
+    p_and_q = Formula.new({:p, :q}, :and)
+
+    assert p_and_q == {:p, :and, :q}
+  end
+
+  test "create a new conjunction q&!r" do
+    not_r = Formula.new(:r, :not)
+    q_and_not_r = Formula.new({:q, not_r}, :and)
+
+    assert q_and_not_r == {:q, :and, {:not, :r}}
   end
 end
