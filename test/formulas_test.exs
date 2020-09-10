@@ -31,4 +31,16 @@ defmodule FormulasTest do
 
     assert q_and_not_r == {:q, :and, {:not, :r}}
   end
+
+  test "create a new disjunction p|q" do
+    p_or_q = Formula.new({:p, :q}, :or)
+
+    assert p_or_q == {:p, :or, :q}
+  end
+
+  test "create p->q" do
+    p_implies_q = Formula.new({:p, :q}, :implies)
+
+    assert p_implies_q == {:p, :implies, :q}
+  end
 end
