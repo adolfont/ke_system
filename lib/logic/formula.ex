@@ -19,4 +19,15 @@ defmodule Logic.Formula do
       when is_binary_connective(connective) do
     {left_subformula, connective, right_subformula}
   end
+
+  def get_connective({:not, _}) do
+    :not
+  end
+
+  def get_connective({_, conn, _}) when conn in @binary_connectives do
+    conn
+  end
+
+  def is_atomic?(atom) when is_atom(atom), do: true
+  def is_atomic?(_), do: false
 end

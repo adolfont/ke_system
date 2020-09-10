@@ -43,4 +43,34 @@ defmodule FormulaTest do
 
     assert p_implies_q == {:p, :implies, :q}
   end
+
+  test "get the connective for !p" do
+    assert Formula.new(:p, :not)
+           |> Formula.get_connective() == :not
+  end
+
+  test "get the connective for p&q" do
+    assert Formula.new({:p, :q}, :and)
+           |> Formula.get_connective() == :and
+  end
+
+  test "get the connective for p|q" do
+    assert Formula.new({:p, :q}, :or)
+           |> Formula.get_connective() == :or
+  end
+
+  test "get the connective for p->q" do
+    assert Formula.new({:p, :q}, :implies)
+           |> Formula.get_connective() == :implies
+  end
+
+  test "verifies that a formula is not atomic" do
+    assert Formula.new({:p, :q}, :implies)
+           |> Formula.is_atomic?() == false
+  end
+
+  test "verifies if a formula is atomic" do
+    assert Formula.new(:p)
+           |> Formula.is_atomic?() == true
+  end
 end
