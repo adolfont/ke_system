@@ -1,4 +1,4 @@
-defmodule FormulasTest do
+defmodule FormulaTest do
   use ExUnit.Case
   alias Logic.Formula
 
