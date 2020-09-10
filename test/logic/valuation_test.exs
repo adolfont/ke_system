@@ -1,4 +1,4 @@
-defmodule ValuationTest do
+defmodule Logic.ValuationTest do
   use ExUnit.Case
   alias Logic.Valuation
   alias Logic.Formula

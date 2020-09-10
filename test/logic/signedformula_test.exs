@@ -1,4 +1,4 @@
-defmodule SignedFormulaTest do
+defmodule Logic.SignedFormulaTest do
   use ExUnit.Case
   alias Logic.SignedFormula
   alias Logic.Formula
