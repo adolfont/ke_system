@@ -28,6 +28,13 @@ defmodule Logic.Formula do
     conn
   end
 
+  def get_proper_immediate_subformulas(atom) when is_atom(atom), do: []
+  def get_proper_immediate_subformulas({:not, subformula}), do: [subformula]
+
+  def get_proper_immediate_subformulas({left_subformula, conn, right_subformula})
+      when conn in @binary_connectives,
+      do: [left_subformula, right_subformula]
+
   def is_atomic?(atom) when is_atom(atom), do: true
   def is_atomic?(_), do: false
 end

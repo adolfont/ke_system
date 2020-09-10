@@ -73,4 +73,15 @@ defmodule FormulaTest do
     assert Formula.new(:p)
            |> Formula.is_atomic?() == true
   end
+
+  test "the proper immediate subformulas of p&q  are p and q" do
+    assert Formula.new({:p, :q}, :and)
+           |> Formula.get_proper_immediate_subformulas() == [Formula.new(:p), Formula.new(:q)]
+  end
+
+  test "the proper immediate subformulas of !(p&q) is  p&q" do
+    assert Formula.new({:p, :q}, :and)
+           |> Formula.new(:not)
+           |> Formula.get_proper_immediate_subformulas() == [Formula.new({:p, :q}, :and)]
+  end
 end
