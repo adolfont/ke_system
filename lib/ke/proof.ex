@@ -15,12 +15,14 @@ defmodule KE.Proof do
     # Does the PB rule can always be applied?
     proof
   end
+
   def apply(proof = %__MODULE__{}, _rule, _premise) do
     # One of of the one-premise rules can only be applied if
     # 1. the premise is part of the list of sfs
     # 2. (?) its conclusion(s) are not part of the branch
     proof
   end
+
   def apply(proof = %__MODULE__{}, _rule, _premise1, _premise2) do
     # One of of the two-premise rules can only be applied if
     # 1. the premises are part of the list of sfs

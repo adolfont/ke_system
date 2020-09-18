@@ -27,5 +27,13 @@ A formula is represented as follows:
 - Binary formulas: {:p, :and, :q}, {:p, :or, :q}, {:p, :implies, :q}, {:p, :implies, {:not , :q}}, {{:p, :and, :r}, :or, :q}
 
 
+## Representation of formulas
 
+- {:T, a_formula}
+- {:F, a_formula}
+
+## Examples
+
+- {:T, {:not, :p}}
+- {:F, {{:p, :and, :r}, :or, :q}}
 
